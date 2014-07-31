@@ -11,8 +11,8 @@ db_hostname = '127.0.0.1'
 db_database = 'databox_demo'
 
 # Connection parameters
-user_access_token = "2lurcy0zwe68os0gcg4w00soccs0kwcgoo8ggkw8wkggogcgk4:"
-source_token = "6a86e8bb6a8sscog" 
+user_access_token = ""
+source_token = "" 
 push_url = "https://app.databox.com/push/custom/" + source_token
 
 headers = urllib3.util.make_headers(basic_auth=user_access_token)
