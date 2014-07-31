@@ -110,12 +110,12 @@ cursor = cnx.cursor()
 cursor.execute(query, ())
 
 for row in cursor:
-    barc_design_rev_7d = {
-               'key' : 'barc_design_rev_7d',
+    barc_serv_rev_7d = {
+               'key' : 'barc_serv_rev_7d',
                'date' : row[0],
                'value' : row[1]
                }
-    post_data.append(barc_design_rev_7d)
+    post_data.append(barc_serv_rev_7d)
 
 cursor.close()
 
@@ -134,12 +134,12 @@ cursor = cnx.cursor()
 cursor.execute(query, ())
 
 for row in cursor:
-    intv_cloth_units_mtd = {
-               'key' : 'intv_cloth_units_mtd',
+    intv_elec_units_mtd = {
+               'key' : 'intv_elec_units_mtd',
                'date' : row[0],
                'value' : row[1]
                }
-    post_data.append(intv_cloth_units_mtd)
+    post_data.append(intv_elec_units_mtd)
 
 cursor.close()
 
