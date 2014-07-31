@@ -117,7 +117,8 @@ day_ws_serv_delta = 0.20 # % funnel variation
 #--------------------------------------------------
 random.seed()
 
-cnx = mysql.connector.connect(user='root', password='', host=db_hostname, database=db_database)
+# MySQL local DB
+cnx = mysql.connector.connect(user='', password='', host=db_hostname, database=db_database)
 
 cursor = cnx.cursor()
 cursor.execute(sql_drop_metrics, ())
