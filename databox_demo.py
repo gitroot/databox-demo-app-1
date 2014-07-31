@@ -311,14 +311,14 @@ for row in cursor:
         prog_tot_rev_mtd_v = {
                'key' : 'prog_tot_rev_mtd',
                'date' : date,
-               'value' : float(row[2])
+               'value' : row[2]
                }
         post_data.append(prog_tot_rev_mtd_v)
     else :
         prog_tot_rev_mtd_m = {
                'key' : 'prog_tot_rev_mtd@max_value',
                'date' : date,
-               'value' : float(row[2])
+               'value' : row[2]
                }
         post_data.append(prog_tot_rev_mtd_m)
     
