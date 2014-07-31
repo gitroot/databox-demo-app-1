@@ -1,0 +1,12 @@
+# Widgets layout description for Databox demo app
+
+Main | Revenue 7D | main_total_rev_7d | USD | LineChart | Last 7 days
+BigNumber | Revenue YTD | bign_total_rev_ytd | USD | Day
+Interval | Product Revenue 7D | comp_prod_rev_7d | USD | Yes
+BarChart | Services Revenue 7D | barc_serv_rev_7d | Month | Yes
+Interval | Electronic Units MTD | intv_elec_units_mtd | Number | Yes
+Pipeline | Website Activity MTD | pipe_wsite_act_mtd
+Funnel | Website Sales MTD | funl_wsite_sales_mtd
+Table | All Metrics 30D | tabl_all_metrics_30d
+Pie | Product Revenue 30D | piec_prod_rev_30d
+Progress | Revenue MTD / Plan | prog_tot_rev_mtd | USD
