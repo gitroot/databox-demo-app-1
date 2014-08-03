@@ -83,13 +83,15 @@ VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s);"""
 # Revenue metrics
 year_revenue_proj = 10000000.00
 
-month_coeff_base = [20,16,22,25,20,16,12,10,20,25,22,16] # Seasonal / per-month-of-year factors 
-week_coeff_base = [35,25,20,15,10] # Seasonal / per-week-of-month factors
-day_coeff_base = [17,20,23,17,13,7,3] # Seasonal / per-day-of-week factors
+# Seasonal factors month/week/day
+month_coeff_base = [20.00,16.00,22.00,25.00,20.00,16.00,12.00,10.00,20.00,25.00,22.00,16.00] 
+week_coeff_base = [35.00,25.00,20.00,15.00,10.00]
+day_coeff_base = [17.00,20.00,23.00,17.00,13.00,7.00,3.00]
 
-month_coeff_delta = 0.25 # Percent allowed factor variation +/-
-week_coeff_delta = 0.25 # Percent allowed factor variation +/-
-day_coeff_delta = 0.25 # Percent allowed factor variation +/-
+# Percent allowed factor variation +/-
+month_coeff_delta = 0.25
+week_coeff_delta = 0.25
+day_coeff_delta = 0.25
 
 year_months = 12 # Months in a year
 month_days = [31,28,31,30,31,30,31,31,30,31,30,31] # Days in each month Jan - Dec
@@ -149,7 +151,7 @@ month = 0
 while(month < len(month_coeff_base)) :
     week_coeff_real = [0.0] * len(week_coeff_base)
     week = 0
-    while(week < math.ceil(month_days[month] / week_days)) :
+    while(week < math.ceil(float(month_days[month]) / week_days)) :
         week_days_real = max(month_days[month] - week * week_days, week_days);
         week_coeff_real[week] = max(week_coeff_base[week] * (week_days_real / week_days) * (1 + random.uniform(-week_coeff_delta, week_coeff_delta)), 0.0)
         week += 1
